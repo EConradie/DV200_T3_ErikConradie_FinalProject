@@ -5,6 +5,8 @@ import { Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BasicNav from './components/navbar';
 import './index.css'
+import Axios from 'axios'
+
 
 function App() {
   return (
