@@ -3,11 +3,10 @@ const cors = require('cors')
 const mongoose = require('mongoose');
 const exp = require('constants');
 const { log } = require('console');
-const ItemsRoute = require('./routes/items')
-
 require('dotenv/config')
-
 const app = express();
+const productRoute = require('./routes/routes')
+const userRoute = require('./routes/users')
 
 //Used with React!
 app.use(cors({
@@ -17,12 +16,13 @@ app.use(cors({
 app.use(express.json())
 app.use(express.urlencoded({ extended: false}))
 
-app.use(ItemsRoute)
+app.use(productRoute)
+app.use(userRoute)
 
 mongoose.connect(process.env.DB_CONNECTION, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    dbName: 'GlenSounds' //Collection Name
+    dbName: 'JECKnives' //Collection Name
 }).then(() => {
     console.log("Connected to the DB")
 })

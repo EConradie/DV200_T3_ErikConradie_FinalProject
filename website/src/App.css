@@ -1,4 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500&family=Work+Sans:wght@300;400;500;600&display=swap');
+
+body {
+  background-color: black;
+}
+
+
 .App {
   color: white;
+  font-family: 'Nunito', sans-serif;
+  background-color: black;
 }
+
+.nav-color {
+  background-color: black;
+  color: white;
+}
+
+.accent {
+  color: '#F89520';
+}
+
+.footer {
+  background-color: black;
+  padding: 70px 0;
+
+}
+
+.footer-container {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  width: 100%;
+
+}
+
+
+.footer-col {
+  height: 100%;
+  position: relative;
+  flex: 1;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: white;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #F89520;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: white;
+  text-decoration: none;
+  font-weight: 200;
+  letter-spacing: 1px;
+  color: white;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #F89520;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: black;
+  
+}
+
+th,
+td {
+  padding: 20px;
+  padding-right: 0px;
+  border-bottom: 1px solid white;
+  text-align: left;
+  width: 0.1%;
+}
+
+th {
+  background-color: black;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  width: 0.1%;
+
+}
+
+.emphasis {
+  font-weight: bold;
+  color: #F89520;
+}
+
+
+
+
 
