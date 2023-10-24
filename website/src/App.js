@@ -9,6 +9,8 @@ import Products from './pages/products'
 import Orders from './pages/orders'
 import Admin from './components/pageComponents/Admin';
 import ProductPage from './components/pageComponents/ProductPage'
+import Individual from './pages/individual';
+
 
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
         <Route path='/ProductPage' element={<ProductPage />} />
         <Route path='/inventory' element={<Inventory />} />
         <Route path='/orders' element={<Orders />} />
+        <Route path='/individual' element={<Individual />} />
       </Routes>
     </div>
   );

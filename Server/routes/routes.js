@@ -38,20 +38,21 @@ router.get('/api/oneproduct/:id', async (req, res) => {
 
 //Update
 router.patch('/api/updateproduct/:id', async (req, res) => {
-
-    const findProduct = await newProductModel.updateOne(
-        {_id: req.params.id }, {
-        $set: [
-            name: req.body.name,
-            price: req.body.price,
-            stock: req.body.stock,
-            category: req.body.category
-        ]
-    });
-    res.json(findProduct);
-
-
-
+    try {
+        const findProduct = await newProductModel.findById(req.params.id);
+        if (!findProduct) {
+            return res.status(404).json({ msg: "Product not found" });
+        }
+        findProduct.name = req.body.name;
+        findProduct.price = req.body.price;
+        findProduct.stock = req.body.stock;
+        findProduct.category = req.body.category;
+        await findProduct.save();
+        res.json(findProduct);
+    } catch (err) {
+        console.error(err.message);
+        res.status(500).send("Server Error");
+    }
 });
 
 
